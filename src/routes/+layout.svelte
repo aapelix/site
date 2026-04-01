@@ -4,11 +4,15 @@
 
 	import { onNavigate } from '$app/navigation';
 
+	let transitioning = false;
+
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
 
 		return new Promise((resolve) => {
 			document.startViewTransition(async () => {
+				if (transitioning) return;
+				transitioning = true;
 				trigger();
 				setTimeout(async () => {
 					resolve();
@@ -16,6 +20,9 @@
 
 					setTimeout(() => {
 						trigger();
+						setTimeout(() => {
+							transitioning = false;
+						}, 600);
 					}, 200);
 				}, 200);
 			});
