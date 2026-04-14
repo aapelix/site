@@ -23,8 +23,8 @@
 	];
 </script>
 
-<section class="mt-5 flex justify-center">
-	<div class="flex w-1/4">
+<section class="mt-20 flex justify-center">
+	<div class="flex w-2/3 lg:w-1/4">
 		<a
 			class="w-fit border border-dashed px-6 py-2 text-lg font-bold duration-300 hover:border-solid hover:bg-[#292524]"
 			href={rootPath}>Go back</a
@@ -32,8 +32,8 @@
 	</div>
 </section>
 
-<section class="mt-[18%] flex justify-center">
-	<div class="flex w-1/4 flex-col gap-3">
+<section class="mt-[18%] flex justify-center md:mt-[10%]">
+	<div class="flex w-2/3 flex-col gap-3 lg:w-1/4">
 		{#each projects as project (project.link)}
 			<a href={project.link} rel="external" class="group relative inline-block">
 				{project.name}

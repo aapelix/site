@@ -2,12 +2,11 @@
 	import { resolve } from '$app/paths';
 
 	const galleryPath = resolve(`/gallery`);
-	const benchmarksPath = resolve(`/benchmarks`);
 </script>
 
 <main>
-	<header class="mt-[20%] flex justify-center">
-		<div class="flex w-1/4 justify-between">
+	<header class="mt-[50%] flex justify-center md:mt-[20%]">
+		<div class="flex w-2/3 items-center justify-between lg:w-1/4">
 			<div>
 				<h1 class="text-xl font-bold">aapelix.dev</h1>
 				<p>aaro</p>
@@ -22,15 +21,11 @@
 		</div>
 	</header>
 
-	<section class="mt-5 flex justify-center">
-		<div class="flex w-1/4 flex-col gap-3">
+	<section class="mt-10 flex justify-center md:mt-5">
+		<div class="flex w-2/3 flex-col gap-3 lg:w-1/4">
 			<a
 				class="w-fit border border-dashed px-6 py-2 text-lg font-bold duration-300 hover:border-solid hover:bg-[#292524]"
 				href={galleryPath}>Gallery</a
-			>
-			<a
-				class="w-fit border border-dashed px-6 py-2 text-lg font-bold duration-300 hover:border-solid hover:bg-[#292524]"
-				href={benchmarksPath}>Benchmarks</a
 			>
 		</div>
 	</section>
